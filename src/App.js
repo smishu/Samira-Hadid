@@ -11,6 +11,7 @@ import Testimonials from './Componets/Testimonials/Testimonials';
 import Register from './Componets/Register/Register';
 import About from './Componets/About/About';
 import ContactMe from './Componets/Contact-Me/ContactMe';
+import Footer from './Componets/Footer/Footer';
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
 
 
       </Routes>
+      <Footer></Footer>
 
 
     </div>
