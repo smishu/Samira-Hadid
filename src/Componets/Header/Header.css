@@ -1,0 +1,18 @@
+.Headers nav {
+    background-color: black;
+    height: 50px;
+}
+
+.Headers nav a {
+
+    margin-right: 25px;
+    text-decoration: none;
+    color: white;
+    margin-top: 20px;
+
+
+}
+
+.Headers nav a:hover {
+    color: blue;
+}
