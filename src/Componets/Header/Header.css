@@ -1,6 +1,8 @@
 .Headers nav {
     background-color: black;
     height: 50px;
+
+
 }
 
 .Headers nav a {
@@ -8,7 +10,11 @@
     margin-right: 25px;
     text-decoration: none;
     color: white;
+    align-items: center;
+    margin-left: 40px;
     margin-top: 20px;
+
+
 
 
 }
