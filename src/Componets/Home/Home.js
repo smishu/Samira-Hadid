@@ -1,11 +1,12 @@
 import React from 'react';
-import Carousel from 'react-bootstrap/Carousel'
+import Carousel from 'react-bootstrap/Carousel';
 import './Home.css';
+import Services from '../Services/Services';
 
 const Home = () => {
     return (
         <div>
-            <div className="baner-top">
+            <div className="baner-top ">
                 <Carousel>
                     <Carousel.Item interval={1000}>
                         <img
@@ -43,6 +44,7 @@ const Home = () => {
                 </Carousel>
 
             </div>
+            <Services></Services>
 
         </div>
     );
