@@ -10,8 +10,9 @@ import Services from './Componets/Services/Services';
 import Testimonials from './Componets/Testimonials/Testimonials';
 import Register from './Componets/Register/Register';
 import About from './Componets/About/About';
-import ContactMe from './Componets/Contact-Me/ContactMe';
+
 import Footer from './Componets/Footer/Footer';
+import ContactMe from './Componets/Contact-Me/ContactMe';
 
 function App() {
   return (
@@ -27,7 +28,8 @@ function App() {
         <Route path="/testimonials" element={<Testimonials></Testimonials>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/register" element={<Register></Register>}></Route>
-        <Route path="/contactMe" element={<ContactMe></ContactMe>}></Route>
+        <Route path="/register" element={<ContactMe></ContactMe>}></Route>
+
         <Route path="/about" element={<About></About>}></Route>
 
 
