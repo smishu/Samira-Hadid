@@ -15,6 +15,9 @@ import Footer from './Componets/Footer/Footer';
 import ContactMe from './Componets/Contact-Me/ContactMe';
 import ServiceDeatels from './Componets/ServiceDeatels/ServiceDeatels';
 import NotFound from './Componets/NotFound/NotFound';
+import Bolg from './Componets/Blog/Bolg';
+
+
 
 function App() {
   return (
@@ -32,9 +35,11 @@ function App() {
         <Route path='/service/:serviceId' element={<ServiceDeatels></ServiceDeatels>}> </Route>
         <Route path="/register" element={<Register></Register>}></Route>
         <Route path="/contact" element={<ContactMe></ContactMe>}></Route>
+        <Route path='/bolg' element={<Bolg></Bolg>}></Route>
+        <Route path="/about" element={<About></About>}></Route>
+
         <Route path='*' element={<NotFound></NotFound>} ></Route>
 
-        <Route path="/about" element={<About></About>}></Route>
 
 
 
