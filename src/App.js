@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+
 import './App.css';
 
 import Login from './Componets/Login/Login';
@@ -13,6 +13,8 @@ import About from './Componets/About/About';
 
 import Footer from './Componets/Footer/Footer';
 import ContactMe from './Componets/Contact-Me/ContactMe';
+import ServiceDeatels from './Componets/ServiceDeatels/ServiceDeatels';
+import NotFound from './Componets/NotFound/NotFound';
 
 function App() {
   return (
@@ -27,8 +29,10 @@ function App() {
         <Route path="/services" element={<Services></Services>}></Route>
         <Route path="/testimonials" element={<Testimonials></Testimonials>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
+        <Route path='/service/:serviceId' element={<ServiceDeatels></ServiceDeatels>}> </Route>
         <Route path="/register" element={<Register></Register>}></Route>
-        <Route path="/register" element={<ContactMe></ContactMe>}></Route>
+        <Route path="/contact" element={<ContactMe></ContactMe>}></Route>
+        <Route path='*' element={<NotFound></NotFound>} ></Route>
 
         <Route path="/about" element={<About></About>}></Route>
 
