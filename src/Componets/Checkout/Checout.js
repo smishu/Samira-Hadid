@@ -3,7 +3,7 @@ import React from 'react';
 const Checout = () => {
     return (
         <div>
-            <h2>Book now</h2>
+            <h2 className='mt-5'>Book now</h2>
 
         </div>
     );

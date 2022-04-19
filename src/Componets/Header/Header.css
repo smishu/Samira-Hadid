@@ -1,3 +1,9 @@
+.navber-top {
+    width: 100%;
+    position: fixed;
+    top: 0;
+}
+
 /* .Headers nav {
     background-color: black;
     height: 50px;

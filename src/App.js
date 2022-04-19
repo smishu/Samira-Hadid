@@ -16,6 +16,9 @@ import ContactMe from './Componets/Contact-Me/ContactMe';
 import ServiceDeatels from './Componets/ServiceDeatels/ServiceDeatels';
 import NotFound from './Componets/NotFound/NotFound';
 import Bolg from './Componets/Blog/Bolg';
+import ReguireAuth from './Componets/Login/ReguireAuth/ReguireAuth';
+
+import Checout from './Componets/Checkout/Checout';
 
 
 
@@ -27,7 +30,9 @@ function App() {
 
 
       <Routes>
+
         <Route path="/" element={<Home></Home>}></Route>
+        <Route path="/home" element={<Home></Home>}></Route>
         <Route path="/skills" element={<Skills></Skills>}></Route>
         <Route path="/services" element={<Services></Services>}></Route>
         <Route path="/testimonials" element={<Testimonials></Testimonials>}></Route>
@@ -37,6 +42,13 @@ function App() {
         <Route path="/contact" element={<ContactMe></ContactMe>}></Route>
         <Route path='/bolg' element={<Bolg></Bolg>}></Route>
         <Route path="/about" element={<About></About>}></Route>
+        <Route path='/checkout' element={
+          <ReguireAuth>
+            <Checout></Checout>
+
+          </ReguireAuth>
+        }
+        ></Route>
 
         <Route path='*' element={<NotFound></NotFound>} ></Route>
 

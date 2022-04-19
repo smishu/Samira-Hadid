@@ -2,13 +2,16 @@ import { signInWithEmailAndPassword } from 'firebase/auth';
 import React, { useRef } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
-import { Link, Navigate, useNavigate } from 'react-router-dom';
+import { Link, Navigate, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
+import SocialLgoin from '../SocialLgoin/SocialLgoin';
 
 const Login = () => {
     const emailRef = useRef('');
     const passwordRef = useRef('');
     const nagigat = useNavigate();
+    const location = useLocation();
+    let from = location.state?.from?.pathname || "/";
 
 
     const [
@@ -18,7 +21,7 @@ const Login = () => {
         error,
     ] = useSignInWithEmailAndPassword(auth);
     if (user) {
-        Navigate('/home');
+        Navigate(from, { replace: true });
     }
 
     const handleSubmit = event => {
@@ -34,7 +37,7 @@ const Login = () => {
     }
     return (
         <div className='container d-block w-50 mx-auto'>
-            <h2 className='text-primary'>Loging Your acounts</h2>
+            <h2 className='text-primary mt-5'>Loging Your acounts</h2>
             <Form onSubmit={handleSubmit}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
@@ -60,6 +63,7 @@ const Login = () => {
             </Form>
             <p>You are not Register <Link to='/Register' className='pe-auto text-decoration-none text-danger' onClick={navigatRegister}>Register Now</Link >
             </p>
+            <SocialLgoin></SocialLgoin>
 
 
         </div>
