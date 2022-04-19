@@ -22,8 +22,8 @@ const Banner = () => {
                         alt="First slide"
                     />
                     <Carousel.Caption>
-                        <h3>First slide label</h3>
-                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                        <h3>Photo Shoot</h3>
+                        <p>A photo shoot is the process taken by creatives and models that results in a visual objective being obtained. An example is a model posing for a photographer at a studio or an outdoor location.</p>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -34,8 +34,8 @@ const Banner = () => {
                     />
 
                     <Carousel.Caption>
-                        <h3>Second slide label</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <h3>Short Film</h3>
+                        <p>Every creature who is born on this gorgeous earth has to face some difficult situations to survive in mother nature. These problems can be called exams. </p>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -46,9 +46,9 @@ const Banner = () => {
                     />
 
                     <Carousel.Caption>
-                        <h3>Third slide label</h3>
+                        <h3>Social Media Ads</h3>
                         <p>
-                            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+                            Social media today is simply online media that facilitates social interaction. There are numerous websites, channels and resources that allow advertisements to be distributed reaching millions of people worldwide.
                         </p>
                     </Carousel.Caption>
                 </Carousel.Item>

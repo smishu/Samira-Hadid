@@ -5,7 +5,7 @@ import Card from 'react-bootstrap/Card'
 const Testimonials = () => {
     return (
         <div className='Testimonials'>
-            <h2>Client Testimonials</h2>
+
 
             <Card className="justify-content-center text-center border border-primary ms-5 mt-5 rounded mb-5 me-5 bg-primary">
 

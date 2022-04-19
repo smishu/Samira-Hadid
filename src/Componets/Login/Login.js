@@ -1,7 +1,8 @@
+import { async } from '@firebase/util';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import React, { useRef } from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, Navigate, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import SocialLgoin from '../SocialLgoin/SocialLgoin';
@@ -23,6 +24,13 @@ const Login = () => {
     if (user) {
         Navigate(from, { replace: true });
     }
+    let errorElement;
+    if (error) {
+        errorElement = <div>
+            <p className='text-danger'>Error: {error.message}</p>
+        </div>
+
+    }
 
     const handleSubmit = event => {
         event.preventDefault();
@@ -34,6 +42,13 @@ const Login = () => {
     }
     const navigatRegister = event => {
         nagigat('/register');
+    }
+    const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
+    const forgetPassword = async () => {
+        const email = emailRef.current.value;
+        await sendPasswordResetEmail(email);
+        alert('Sent email');
+
     }
     return (
         <div className='container d-block w-50 mx-auto'>
@@ -54,15 +69,17 @@ const Login = () => {
                         Inter your Password
                     </Form.Text>
                 </Form.Group>
-                <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                    <Form.Check type="checkbox" label="Check me out" />
-                </Form.Group>
-                <Button variant="primary" type="submit">
-                    Submit
+
+                <Button className='w-50 mx-auto bg-primary' variant="primary" type="submit">
+                    Login
                 </Button>
             </Form>
-            <p>You are not Register <Link to='/Register' className='pe-auto text-decoration-none text-danger' onClick={navigatRegister}>Register Now</Link >
+            {errorElement}
+            <p className=''>You are not Register? <Link to='/Register' className='pe-auto text-decoration-none text-danger' onClick={navigatRegister}>Register Now</Link >
             </p>
+            <p className=''>Forget Password <Link to='/Register' className='pe-auto text-decoration-none text-danger' onClick={forgetPassword}>Forget</Link >
+            </p>
+
             <SocialLgoin></SocialLgoin>
 
 
